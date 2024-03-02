@@ -13,3 +13,5 @@ Ex: If the input is:
 the output is:
 
     not a palindrome: bobby
+
+Hint: Start by removing spaces. Then check if the string equals itself in reverse.

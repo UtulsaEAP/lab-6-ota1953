@@ -42,5 +42,25 @@ class TestFilterAndPrintRange(unittest.TestCase):
         # Check if the output matches the expected output
         self.assertEqual(captured_output.getvalue(), expected_output)
 
+    def test_three_input(self):
+        input_list = [1,2,3]
+        min_val, max_val = 0,5
+        expected_output = "1,2,3,"
+
+        # Redirect stdout to capture the print statements
+        import sys
+        from io import StringIO
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        # Call the function to filter and print the range
+        filter_and_print_range(input_list, min_val, max_val)
+
+        # Reset redirect.
+        sys.stdout = sys.__stdout__
+
+        # Check if the output matches the expected output
+        self.assertEqual(captured_output.getvalue(), expected_output)
+
 if __name__ == '__main__':
     unittest.main()

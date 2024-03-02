@@ -59,5 +59,44 @@ class TestProcessAndPrint(unittest.TestCase):
         # Check if the output matches the expected output
         self.assertEqual(captured_output.getvalue(), expected_output)
 
+    def test_four(self):
+        user_input = "1 7 2 88 -5 6"
+        expected_output = "-5 "
+        
+        # Redirect stdout to capture the print statements
+        import sys
+        from io import StringIO
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        # Call the function to process and print
+        process_and_print(user_input)
+        
+        # Reset redirect.
+        sys.stdout = sys.__stdout__
+
+        # Check if the output matches the expected output
+        self.assertEqual(captured_output.getvalue(), expected_output)
+
+    def test_five(self):
+        user_input = "0 -8 -23 4 -9"
+        expected_output = "-8 -9 -23 "
+        
+        # Redirect stdout to capture the print statements
+        import sys
+        from io import StringIO
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        # Call the function to process and print
+        process_and_print(user_input)
+        
+        # Reset redirect.
+        sys.stdout = sys.__stdout__
+
+        # Check if the output matches the expected output
+        self.assertEqual(captured_output.getvalue(), expected_output)
+
+
 if __name__ == '__main__':
     unittest.main()

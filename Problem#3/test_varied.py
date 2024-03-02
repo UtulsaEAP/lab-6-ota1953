@@ -14,5 +14,17 @@ class TestProcessInput(unittest.TestCase):
         self.assertEqual(max_value, 12.00)
         self.assertEqual(average_value, 4.00)
 
+    def test_case_3(self):
+        input_string = "5.25 1 2"
+        max_value, average_value = process_input(input_string)
+        self.assertEqual(max_value, 5.25)
+        self.assertEqual(average_value, 2.75)
+
+    def test_case_4(self):
+        input_string = "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+        max_value, average_value = process_input(input_string)
+        self.assertEqual(max_value, 0.00)
+        self.assertEqual(average_value, 0.00)
+
 if __name__ == "__main__":
     unittest.main()

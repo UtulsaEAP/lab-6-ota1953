@@ -10,6 +10,17 @@ def test_passed():
     else:
         print('Test failed: in_order() should have returned True because the numbers are sorted')
         return False
+    
+def test_passed3():
+    nums = [5, 6, 7, 8, 3]
+    result = in_order(nums)
+    correct_result = False
+    if result == correct_result:
+        print('Test passed: in_order() correctly returned True')
+        return True
+    else:
+        print('Test failed: in_order() should have returned True because the numbers are sorted')
+        return False
 
 def test_passed2():
     nums = [5, 5, 6, 6, 6, 7, 8, 10, 10, 10, 10]
