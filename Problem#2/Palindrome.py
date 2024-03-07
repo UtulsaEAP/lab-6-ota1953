@@ -1,3 +1,4 @@
+#Owen Anderson THUR 2:00-3:15
 def check_palindrome(user_input):
     new_string = ""
     index = len(user_input)
