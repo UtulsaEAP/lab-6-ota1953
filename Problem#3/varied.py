@@ -1,4 +1,7 @@
-# #Owen Anderson THUR 2:00-3:15
+'''
+Name: Owen Anderson 
+Lab Time: THUR 2:00 - 3:15
+'''
 def process_input(input_string):
        # Split into separate strings
 

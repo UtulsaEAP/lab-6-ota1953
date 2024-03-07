@@ -1,3 +1,7 @@
+'''
+Name: Owen Anderson 
+Lab Time: THUR 2:00 - 3:15
+'''
 def process_and_print(user_input):
       # Split into separate strings
     split = user_input.split()
