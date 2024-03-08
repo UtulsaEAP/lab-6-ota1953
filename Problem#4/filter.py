@@ -19,9 +19,6 @@ def process_and_print(user_input):
         print(values, end=' ')
 
    
-    
-    
-
 if __name__ == "__main__":
     # User inputs string w/ numbers
     user_input = input("Enter a space-separated string of numbers: ")
