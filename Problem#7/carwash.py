@@ -10,25 +10,23 @@ def calculate_car_wash_price(service_choice1, service_choice2):
    #type your code here 
     print("ZyCar Wash")
     print("Base car wash - $"+str(base_wash))
-    if service_choice1 == "-":
-        pass
-    elif service_choice1 in services:
-        print(service_choice1+' - $'+str(services[service_choice1]))
-
-    if service_choice2 == "-":
-        pass
-    elif service_choice2 in services:
-        print(service_choice2+' - $',str(services[service_choice2]))
-
-    if service_choice2 == "-":
-        if service_choice1 == "-":
-            total = base_wash
-        elif service_choice1 != "-":
-            total = base_wash+services[service_choice1]
+    if service_choice1 != '-':
+        choice1_price = services.get(service_choice1)
+        print (str(service_choice1) + ' - $' + str(choice1_price))
     else:
-        total = base_wash+services[service_choice1]+services[service_choice2]
-    print("-----")
-    print("Total price: $"+str(total))
+        choice1_price = 0
+    
+    if service_choice2 != '-':
+        choice2_price = services.get(service_choice2)
+        print (str(service_choice2) + ' - $' + str(choice2_price))
+    else:
+        choice2_price = 0
+
+    total_price = base_wash + choice1_price + choice2_price
+
+    print (f'-----\nTotal price: ${total_price}')
+
+
 
     
 if __name__ == '__main__':
