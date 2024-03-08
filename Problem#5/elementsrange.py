@@ -1,5 +1,9 @@
+'''
+Name: Owen Anderson 
+Lab Time: THUR 2:00 - 3:15
+'''
 def filter_and_print_range(input_list, min_val, max_val):
-    #write your code here
+    
 
 if __name__ == '__main__':
     # Get input for the list of integers
