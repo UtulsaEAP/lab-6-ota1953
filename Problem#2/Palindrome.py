@@ -3,15 +3,13 @@ Name: Owen Anderson
 Lab Time: THUR 2:00 - 3:15
 '''
 def check_palindrome(user_input):
-    new_string =""
-    for i in user_input:
-        new_string += i[::-1]
-    
-    if user_input == new_string:
-        return "palindrome: " + new_string
+    reverse = user_input.replace(" ","")
+    if reverse == reverse[::-1]:
+        print("palindrome: " + user_input)
     else:
-        return "not a palindrome: " + user_input
+        print("not a palindrome: " + user_input)
+    return
 
 if __name__ == "__main__":
     user_input = input()
-    print(check_palindrome(user_input))
+    check_palindrome(user_input)
